@@ -28,7 +28,7 @@ namespace GreenPerfumes
             }
             else
             {
-                MainClass.ShowReportsp(rd, crystalReportViewer1, "GetPurchaseReciept");
+                MainClass.ShowReportsp(rd, crystalReportViewer1, "GetPurchaseReciept", "@PurchaseInvoiceNo", PurchaseInvoice.INVOICENO);
             }
         }
 

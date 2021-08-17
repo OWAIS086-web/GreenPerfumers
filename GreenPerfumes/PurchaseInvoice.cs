@@ -416,7 +416,7 @@ namespace GreenPerfumes
            
         }
 
-
+        public static string INVOICENO = "";
         private void btnFinalize_Click(object sender, EventArgs e)
         {
             if(cboInvoiceType.SelectedIndex == 0)
@@ -728,7 +728,7 @@ namespace GreenPerfumes
 
                 MainClass.con.Close();
                 MessageBox.Show("Purchase Successful");
-             
+                INVOICENO = invoiceno;
                 PurchaseReportForm prf = new PurchaseReportForm();
                 prf.Show();
                 CompleteClear();

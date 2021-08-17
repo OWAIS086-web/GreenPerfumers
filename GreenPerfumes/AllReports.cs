@@ -938,6 +938,107 @@ namespace GreenPerfumes
             CustomerStatement cs = new CustomerStatement();
             cs.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchPurhcaseInvoice_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearchPurhcaseInvoice.Text == "")
+            {
+                ShowInvoices(dgvPurchaseInvoices, InvoiceIDGVC, SupplierNameGVC, InvoiceNoGVC, DateGVC, TypeGVC, GrandTotalGVC);
+
+            }
+            else
+            {
+                ShowPurInvoicesSearched(dgvPurchaseInvoices, InvoiceIDGVC, SupplierNameGVC, InvoiceNoGVC, DateGVC, TypeGVC, GrandTotalGVC);
+            }
+        }
+
+
+        private void ShowPurInvoicesSearched(DataGridView dgv, DataGridViewColumn InvID, DataGridViewColumn Name, DataGridViewColumn InvNO, DataGridViewColumn InvDAte, DataGridViewColumn Type, DataGridViewColumn Total)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                MainClass.con.Open();
+                if (txtSearchPurhcaseInvoice.Text != "")
+                {
+                    cmd = new SqlCommand("select si.SupplierInvoiceID,pr.PersonName,p.InvoiceNo,si.InvoiceDate as 'Date',si.PaymentType,p.GrandTotal from SupplierInvoices si inner join Purchases p on p.SupplierInvoice_ID = si.SupplierInvoiceID inner join Persons pr on pr.PersonID = si.Supplier_ID where p.InvoiceNo like '%"+txtSearchPurhcaseInvoice.Text+"%' ", MainClass.con);
+                }
+                else
+                {
+                    cmd = new SqlCommand("select si.SupplierInvoiceID,pr.PersonName,p.InvoiceNo,si.InvoiceDate as 'Date',si.PaymentType,p.GrandTotal from SupplierInvoices si inner join Purchases p on p.SupplierInvoice_ID = si.SupplierInvoiceID inner join Persons pr on pr.PersonID = si.Supplier_ID", MainClass.con);
+
+                }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                InvID.DataPropertyName = dt.Columns["SupplierInvoiceID"].ToString();
+                Name.DataPropertyName = dt.Columns["PersonName"].ToString();
+                InvNO.DataPropertyName = dt.Columns["InvoiceNo"].ToString();
+                InvDAte.DataPropertyName = dt.Columns["Date"].ToString();
+                Type.DataPropertyName = dt.Columns["PaymentType"].ToString();
+                Total.DataPropertyName = dt.Columns["GrandTotal"].ToString();
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void ShowSaleInvoiceSearched(DataGridView dgv, DataGridViewColumn InvID, DataGridViewColumn Name, DataGridViewColumn InvNO, DataGridViewColumn InvDAte, DataGridViewColumn Type, DataGridViewColumn Total)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                MainClass.con.Open();
+                if (txtSearchSaleInvoice.Text != "")
+                {
+                    cmd = new SqlCommand("select ci.CustomerInvoiceID,pr.PersonName,s.InvoiceNo,ci.InvoiceDate as 'Date',ci.PaymentType,s.GrandTotal from CustomerInvoices ci inner join Sales s on s.CustomerInvoice_ID = ci.CustomerInvoiceID inner join Persons pr on pr.PersonID = ci.Customer_ID where s.InvoiceNo like '%" + txtSearchSaleInvoice.Text + "%' ", MainClass.con);
+                }
+                else
+                {
+                    cmd = new SqlCommand("select ci.CustomerInvoiceID,pr.PersonName,s.InvoiceNo,ci.InvoiceDate as 'Date',ci.PaymentType,s.GrandTotal from CustomerInvoices ci inner join Sales s on s.CustomerInvoice_ID = ci.CustomerInvoiceID inner join Persons pr on pr.PersonID = ci.Customer_ID", MainClass.con);
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                InvID.DataPropertyName = dt.Columns["CustomerInvoiceID"].ToString();
+                Name.DataPropertyName = dt.Columns["PersonName"].ToString();
+                InvNO.DataPropertyName = dt.Columns["InvoiceNo"].ToString();
+                InvDAte.DataPropertyName = dt.Columns["Date"].ToString();
+                Type.DataPropertyName = dt.Columns["PaymentType"].ToString();
+                Total.DataPropertyName = dt.Columns["GrandTotal"].ToString();
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtSearchSaleInvoice_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearchSaleInvoice.Text == "")
+            {
+                ShowInvoicesCustomer(dgvSaleInvoices, InvoiceIDCGVC, CustomerCGVC, InvoiceNoCGVC, InvoiceDateCGVC, TypeCGVC, TotalCGVC);
+            }
+            else
+            {
+                ShowSaleInvoiceSearched(dgvSaleInvoices, InvoiceIDCGVC, CustomerCGVC, InvoiceNoCGVC, InvoiceDateCGVC, TypeCGVC, TotalCGVC);
+
+            }
+        }
     }
     
 }

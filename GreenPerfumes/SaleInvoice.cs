@@ -170,7 +170,7 @@ namespace GreenPerfumes
     
 
         private string[] ProductsData = new string[3];
-        
+        public static  string SALEINVOICENO = "";
         private void cboUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (txtStockInfo.Text != "")
@@ -832,7 +832,8 @@ namespace GreenPerfumes
                         cmd.Parameters.AddWithValue("@SaleBalance", float.Parse(txtRemainingAmount.Text));
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Sale Successful"); 
+                        MessageBox.Show("Sale Successful");
+                        SALEINVOICENO = invoiceno;
                         SaleReportForm srf = new SaleReportForm();
                         srf.Show();
                         CompleteClear();
