@@ -20,7 +20,7 @@ namespace GreenPerfumes
             InitializeComponent();
         }
 
-        private void ShowExpense(DataGridView dgv , DataGridViewColumn expid, DataGridViewColumn Expense, DataGridViewColumn expenseprice,DataGridViewColumn dates ,string search = "")
+        private void ShowExpense(DataGridView dgv , DataGridViewColumn expid, DataGridViewColumn Expense, DataGridViewColumn expenseprice,DataGridViewColumn dates)
         {
             SqlCommand cmd;
             try
@@ -28,11 +28,11 @@ namespace GreenPerfumes
                 MainClass.con.Open();
                 if(date == 1)
                 {
-                     cmd = new SqlCommand("select * from Expenses  where ExpenseDate between '"+dateTimePicker1.Value.ToShortDateString()+ "' and '" + dateTimePicker2.Value.ToShortDateString() + "' ", MainClass.con);
+                     cmd = new SqlCommand("select ExpenseID,ExpenseName,ExpensePrice,format(ExpenseDate,'dd/MM/yyyy') as 'ExpenseDate' from Expenses  where ExpenseDate between '"+dateTimePicker1.Value.ToShortDateString()+ "' and '" + dateTimePicker2.Value.ToShortDateString() + "' ", MainClass.con);
                 }
                 else
                 {
-                     cmd = new SqlCommand("select * from Expenses order by ExpenseName", MainClass.con);
+                     cmd = new SqlCommand("select ExpenseID,ExpenseName,ExpensePrice,format(ExpenseDate,'dd/MM/yyyy') as 'ExpenseDate' from Expenses order by ExpenseName", MainClass.con);
                 }
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -129,6 +129,7 @@ namespace GreenPerfumes
         private void Expenses_Load(object sender, EventArgs e)
         {
             ShowExpense(dataGridView2, ExpenseIDGV, ExpenseGV, ExpensePriceGV, DateGV);
+            date = 0;
             ShowTotal();
         }
 
@@ -183,9 +184,12 @@ namespace GreenPerfumes
             ShowTotal();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+
+        private void DTCHANGED(object sender, EventArgs e)
         {
-            
+            date = 1;
+            ShowExpense(dataGridView2, ExpenseIDGV, ExpenseGV, ExpensePriceGV, DateGV);
+            ShowTotal();
         }
     }
 }

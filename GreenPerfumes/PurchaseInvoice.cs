@@ -429,8 +429,8 @@ namespace GreenPerfumes
                 MessageBox.Show("Please Select Supplier");
                 return;
             }
-            
-            string invoiceno = "PUR" + DateTime.Now.ToString("yyddff");
+            Random generator = new Random();
+            string invoiceno = "PUR" + generator.Next(0, 1000000).ToString("D6");
             button1.PerformClick();
             float grandtotal =float.Parse(txtGrandTotal.Text.ToString());
             MainClass.con.Open();
@@ -708,7 +708,7 @@ namespace GreenPerfumes
                 SqlCommand cmd3 = new SqlCommand(InsertPayment, MainClass.con);
                 cmd3.Parameters.AddWithValue("@SupplierInvoice_ID", SupplierInvoiceID);
                 cmd3.Parameters.AddWithValue("@Supplier_ID", dgvPurchaseItems.CurrentRow.Cells[10].Value);
-                cmd3.Parameters.AddWithValue("@InvoiceType", txtInvoiceType.Text);
+                cmd3.Parameters.AddWithValue("@InvoiceType", cboInvoiceType.Text);
                 cmd3.Parameters.AddWithValue("@InvoiceDate", dtInvoice.Value.ToShortDateString());
                 cmd3.Parameters.AddWithValue("@TotalAmount", float.Parse(txtTotalAmount.Text));
                 cmd3.Parameters.AddWithValue("@PaidAmount", float.Parse(txtPayingAmount.Text));

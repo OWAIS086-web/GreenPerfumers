@@ -23,17 +23,20 @@ namespace GreenPerfumes
         private void SaleReportForm_Load(object sender, EventArgs e)
         {
             rd = new ReportDocument();
-            if (AllReports.Invoice_ID != 0)
+            if (SaleInvoice.SALEINVOICENO == "")
             {
-                MainClass.ShowReports(rd, crystalReportViewer1, "GetSaleRecieptWRTCustomerInvoiceID", "@CustomerInvoice_ID", AllReports.Invoice_ID);
-            }
-            else if (SaleInvoice.SaleID != 0)
-            {
-                MainClass.ShowReports(rd, crystalReportViewer1, "GetSaleReceipt2", "@SaleID", SaleInvoice.SaleID);
+                if (AllReports.Invoice_ID != 0)
+                {
+                    MainClass.ShowReports(rd, crystalReportViewer1, "GetSaleRecieptWRTCustomerInvoiceID", "@CustomerInvoice_ID", AllReports.Invoice_ID);
+                }
+                else
+                {
+                    MainClass.ShowReports(rd, crystalReportViewer1, "GetSaleReceipt2", "@SaleID", SaleInvoice.SaleID);
+                }
             }
             else
             {
-                MainClass.ShowReports(rd, crystalReportViewer1, "GetSaleReciept", "@SaleInvoiceNo",SaleInvoice.SALEINVOICENO);
+                MainClass.ShowReports(rd, crystalReportViewer1, "GetSaleReciept", "@SaleInvoiceNo", SaleInvoice.SALEINVOICENO);
             }
         }
 

@@ -555,6 +555,10 @@ namespace GreenPerfumes
             {
                 SqlCommand cmd = new SqlCommand(proc, MainClass.con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                if (param1 != "")
+                {
+                    cmd.Parameters.AddWithValue(param1, val1);
+                }
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

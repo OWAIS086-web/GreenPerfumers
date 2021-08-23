@@ -658,8 +658,8 @@ namespace GreenPerfumes
                     return;
                 }
 
-
-                string invoiceno = "SAL" + DateTime.Now.ToString("yyddff");
+                Random generator = new Random();
+                string invoiceno = "SAL" + generator.Next(0, 1000000).ToString("D6");
                 float grandtotal = float.Parse(txtGrandTotal.Text.ToString());
                 MainClass.con.Open();
                 try
@@ -807,7 +807,7 @@ namespace GreenPerfumes
                         SqlCommand cmd3 = new SqlCommand(InsertPayment, MainClass.con);
                         cmd3.Parameters.AddWithValue("@CustomerInvoice_ID", CustomerInvoiceID);
                         cmd3.Parameters.AddWithValue("@Customer_ID", cboCustomer.SelectedValue.ToString());
-                        cmd3.Parameters.AddWithValue("@InvoiceType", txtInvoiceType.Text);
+                        cmd3.Parameters.AddWithValue("@InvoiceType", cboInvoiceType.Text);
                         cmd3.Parameters.AddWithValue("@InvoiceDate", dtInvoice.Value.ToShortDateString());
                         cmd3.Parameters.AddWithValue("@TotalAmount", float.Parse(txtTotalAmount.Text));
                         cmd3.Parameters.AddWithValue("@PaidAmount", float.Parse(txtPayingAmount.Text));

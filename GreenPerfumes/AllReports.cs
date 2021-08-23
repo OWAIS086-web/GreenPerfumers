@@ -29,17 +29,19 @@ namespace GreenPerfumes
         }
         private void ShowInvoices(DataGridView dgv, DataGridViewColumn InvID, DataGridViewColumn Name, DataGridViewColumn InvNO, DataGridViewColumn InvDAte, DataGridViewColumn Type, DataGridViewColumn Total)
         {
+            double Purchasetotal = 0;
             try
             {
                 SqlCommand cmd = null;
                 MainClass.con.Open();
                 if(purchasedate == 1)
                 {
-                    cmd = new SqlCommand("select si.SupplierInvoiceID,pr.PersonName,p.InvoiceNo,si.InvoiceDate as 'Date',si.PaymentType,p.GrandTotal from SupplierInvoices si inner join Purchases p on p.SupplierInvoice_ID = si.SupplierInvoiceID inner join Persons pr on pr.PersonID = si.Supplier_ID where si.InvoiceDate between '"+dtPurchase1.Value.ToShortDateString()+ "' and '" + dtPurchase2.Value.ToShortDateString() + "' ", MainClass.con);
+                    
+                    cmd = new SqlCommand("select si.SupplierInvoiceID,pr.PersonName,p.InvoiceNo,format(si.InvoiceDate, 'dd/MM/yyyy') as 'Date',si.PaymentType,p.GrandTotal from SupplierInvoices si inner join Purchases p on p.SupplierInvoice_ID = si.SupplierInvoiceID inner join Persons pr on pr.PersonID = si.Supplier_ID where si.InvoiceDate between '" + dtPurchase1.Value.ToShortDateString()+ "' and '" + dtPurchase2.Value.ToShortDateString() + "' ", MainClass.con);
                 }
                 else
                 {
-                    cmd = new SqlCommand("select si.SupplierInvoiceID,pr.PersonName,p.InvoiceNo,si.InvoiceDate as 'Date',si.PaymentType,p.GrandTotal from SupplierInvoices si inner join Purchases p on p.SupplierInvoice_ID = si.SupplierInvoiceID inner join Persons pr on pr.PersonID = si.Supplier_ID", MainClass.con);
+                    cmd = new SqlCommand("select si.SupplierInvoiceID,pr.PersonName,p.InvoiceNo,format(si.InvoiceDate, 'dd/MM/yyyy') as 'Date',si.PaymentType,p.GrandTotal from SupplierInvoices si inner join Purchases p on p.SupplierInvoice_ID = si.SupplierInvoiceID inner join Persons pr on pr.PersonID = si.Supplier_ID", MainClass.con);
 
                 }
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -59,22 +61,28 @@ namespace GreenPerfumes
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+            foreach (DataGridViewRow item in dgvPurchaseInvoices.Rows)
+            {
+                Purchasetotal += float.Parse(item.Cells[6].Value.ToString());
+            }
+            txtPurchaseTotal.Text = Purchasetotal.ToString();
         }
 
 
         private void ShowInvoicesCustomer(DataGridView dgv, DataGridViewColumn InvID, DataGridViewColumn Name, DataGridViewColumn InvNO, DataGridViewColumn InvDAte, DataGridViewColumn Type, DataGridViewColumn Total)
         {
+            double SaleTotal = 0;
             try
             {
                 SqlCommand cmd = null;
                 MainClass.con.Open();
                 if(saledate == 1)
                 {
-                    cmd = new SqlCommand("select ci.CustomerInvoiceID,pr.PersonName,s.InvoiceNo,ci.InvoiceDate as 'Date',ci.PaymentType,s.GrandTotal from CustomerInvoices ci inner join Sales s on s.CustomerInvoice_ID = ci.CustomerInvoiceID inner join Persons pr on pr.PersonID = ci.Customer_ID where ci.InvoiceDate between '" + dtSale1.Value.ToShortDateString() + "' and '" + dtSale2.Value.ToShortDateString() + "'", MainClass.con);
+                    cmd = new SqlCommand("select ci.CustomerInvoiceID,pr.PersonName,s.InvoiceNo,format(ci.InvoiceDate, 'dd/MM/yyyy') as 'Date',ci.PaymentType,s.GrandTotal from CustomerInvoices ci inner join Sales s on s.CustomerInvoice_ID = ci.CustomerInvoiceID inner join Persons pr on pr.PersonID = ci.Customer_ID where ci.InvoiceDate between '" + dtSale1.Value.ToShortDateString() + "' and '" + dtSale2.Value.ToShortDateString() + "'", MainClass.con);
                 }
                 else
                 {
-                    cmd = new SqlCommand("select ci.CustomerInvoiceID,pr.PersonName,s.InvoiceNo,ci.InvoiceDate as 'Date',ci.PaymentType,s.GrandTotal from CustomerInvoices ci inner join Sales s on s.CustomerInvoice_ID = ci.CustomerInvoiceID inner join Persons pr on pr.PersonID = ci.Customer_ID", MainClass.con);
+                    cmd = new SqlCommand("select ci.CustomerInvoiceID,pr.PersonName,s.InvoiceNo,format(ci.InvoiceDate, 'dd/MM/yyyy') as 'Date',ci.PaymentType,s.GrandTotal from CustomerInvoices ci inner join Sales s on s.CustomerInvoice_ID = ci.CustomerInvoiceID inner join Persons pr on pr.PersonID = ci.Customer_ID", MainClass.con);
                 }
                  
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -94,6 +102,11 @@ namespace GreenPerfumes
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+            foreach (DataGridViewRow item in dgvSaleInvoices.Rows)
+            {
+                SaleTotal += float.Parse(item.Cells[6].Value.ToString());
+            }
+            txtSaleTotal.Text = SaleTotal.ToString();
         }
 
         private void ShowTransferReports(DataGridView dgv, DataGridViewColumn TID, DataGridViewColumn TProduct, DataGridViewColumn TQty, DataGridViewColumn TUnit, DataGridViewColumn TDate, DataGridViewColumn TTotal)

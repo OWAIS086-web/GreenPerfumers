@@ -22,7 +22,7 @@ namespace GreenPerfumes
         private void PurchaseReportForm_Load(object sender, EventArgs e)
         {
             rd = new ReportDocument();
-            if (AllReports.Invoice_ID != 0)
+            if (PurchaseInvoice.INVOICENO == "")
             {
                 MainClass.ShowReportsp(rd, crystalReportViewer1, "GetPurchaseRecieptWRTSuipplierInvoiceID", "@SupplierInvoice_ID",AllReports.Invoice_ID);
             }

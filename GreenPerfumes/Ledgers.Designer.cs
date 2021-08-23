@@ -174,6 +174,7 @@ namespace GreenPerfumes
             this.GPPAyment.TabIndex = 2;
             this.GPPAyment.Text = "PAYMENT";
             this.GPPAyment.Visible = false;
+            this.GPPAyment.Click += new System.EventHandler(this.GPPAyment_Click);
             // 
             // button2
             // 

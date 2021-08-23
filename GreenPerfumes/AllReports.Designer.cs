@@ -30,27 +30,27 @@ namespace GreenPerfumes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -100,6 +100,7 @@ namespace GreenPerfumes
             this.txtnone = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PurchaseInvoices = new System.Windows.Forms.TabPage();
+            this.txtSearchPurhcaseInvoice = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
@@ -114,8 +115,11 @@ namespace GreenPerfumes
             this.TypeGVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrandTotalGVC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViewButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label32 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SaleInvoices = new System.Windows.Forms.TabPage();
+            this.txtSearchSaleInvoice = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -218,10 +222,10 @@ namespace GreenPerfumes
             this.cboSupplierReport = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtSearchPurhcaseInvoice = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.txtSearchSaleInvoice = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
+            this.txtPurchaseTotal = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtSaleTotal = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -864,6 +868,7 @@ namespace GreenPerfumes
             // PurchaseInvoices
             // 
             this.PurchaseInvoices.BackColor = System.Drawing.Color.White;
+            this.PurchaseInvoices.Controls.Add(this.txtPurchaseTotal);
             this.PurchaseInvoices.Controls.Add(this.txtSearchPurhcaseInvoice);
             this.PurchaseInvoices.Controls.Add(this.button10);
             this.PurchaseInvoices.Controls.Add(this.button11);
@@ -873,6 +878,7 @@ namespace GreenPerfumes
             this.PurchaseInvoices.Controls.Add(this.dtPurchase1);
             this.PurchaseInvoices.Controls.Add(this.dgvPurchaseInvoices);
             this.PurchaseInvoices.Controls.Add(this.label32);
+            this.PurchaseInvoices.Controls.Add(this.label34);
             this.PurchaseInvoices.Controls.Add(this.label1);
             this.PurchaseInvoices.Location = new System.Drawing.Point(4, 22);
             this.PurchaseInvoices.Name = "PurchaseInvoices";
@@ -881,6 +887,15 @@ namespace GreenPerfumes
             this.PurchaseInvoices.TabIndex = 1;
             this.PurchaseInvoices.Text = "Purchase Invoices";
             // 
+            // txtSearchPurhcaseInvoice
+            // 
+            this.txtSearchPurhcaseInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSearchPurhcaseInvoice.Location = new System.Drawing.Point(786, 122);
+            this.txtSearchPurhcaseInvoice.Name = "txtSearchPurhcaseInvoice";
+            this.txtSearchPurhcaseInvoice.Size = new System.Drawing.Size(255, 23);
+            this.txtSearchPurhcaseInvoice.TabIndex = 18;
+            this.txtSearchPurhcaseInvoice.TextChanged += new System.EventHandler(this.txtSearchPurhcaseInvoice_TextChanged);
+            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Tomato;
@@ -888,7 +903,7 @@ namespace GreenPerfumes
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(486, 69);
+            this.button10.Location = new System.Drawing.Point(224, 146);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(87, 27);
             this.button10.TabIndex = 16;
@@ -903,7 +918,7 @@ namespace GreenPerfumes
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(393, 69);
+            this.button11.Location = new System.Drawing.Point(131, 146);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(87, 27);
             this.button11.TabIndex = 17;
@@ -915,7 +930,7 @@ namespace GreenPerfumes
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label30.Location = new System.Drawing.Point(213, 74);
+            this.label30.Location = new System.Drawing.Point(212, 122);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(25, 17);
             this.label30.TabIndex = 14;
@@ -925,7 +940,7 @@ namespace GreenPerfumes
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label31.Location = new System.Drawing.Point(18, 74);
+            this.label31.Location = new System.Drawing.Point(17, 122);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(40, 17);
             this.label31.TabIndex = 15;
@@ -935,7 +950,7 @@ namespace GreenPerfumes
             // 
             this.dtPurchase2.CustomFormat = "dd/MM/yyyy";
             this.dtPurchase2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPurchase2.Location = new System.Drawing.Point(244, 72);
+            this.dtPurchase2.Location = new System.Drawing.Point(243, 120);
             this.dtPurchase2.Name = "dtPurchase2";
             this.dtPurchase2.Size = new System.Drawing.Size(143, 20);
             this.dtPurchase2.TabIndex = 12;
@@ -945,7 +960,7 @@ namespace GreenPerfumes
             // 
             this.dtPurchase1.CustomFormat = "dd/MM/yyyy";
             this.dtPurchase1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPurchase1.Location = new System.Drawing.Point(64, 72);
+            this.dtPurchase1.Location = new System.Drawing.Point(63, 120);
             this.dtPurchase1.Name = "dtPurchase1";
             this.dtPurchase1.Size = new System.Drawing.Size(143, 20);
             this.dtPurchase1.TabIndex = 13;
@@ -955,21 +970,21 @@ namespace GreenPerfumes
             // 
             this.dgvPurchaseInvoices.AllowUserToAddRows = false;
             this.dgvPurchaseInvoices.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle61.BackColor = System.Drawing.Color.White;
-            this.dgvPurchaseInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPurchaseInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPurchaseInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPurchaseInvoices.BackgroundColor = System.Drawing.Color.White;
             this.dgvPurchaseInvoices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPurchaseInvoices.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPurchaseInvoices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPurchaseInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPurchaseInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPurchaseInvoices.ColumnHeadersHeight = 21;
             this.dgvPurchaseInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvoiceIDGVC,
@@ -979,17 +994,17 @@ namespace GreenPerfumes
             this.TypeGVC,
             this.GrandTotalGVC,
             this.ViewButton});
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle63.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPurchaseInvoices.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPurchaseInvoices.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPurchaseInvoices.EnableHeadersVisualStyles = false;
             this.dgvPurchaseInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPurchaseInvoices.Location = new System.Drawing.Point(6, 105);
+            this.dgvPurchaseInvoices.Location = new System.Drawing.Point(7, 184);
             this.dgvPurchaseInvoices.Name = "dgvPurchaseInvoices";
             this.dgvPurchaseInvoices.ReadOnly = true;
             this.dgvPurchaseInvoices.RowHeadersVisible = false;
@@ -1072,13 +1087,25 @@ namespace GreenPerfumes
             this.ViewButton.Text = "VIEW";
             this.ViewButton.UseColumnTextForButtonValue = true;
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(540, 122);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(240, 25);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Search Purchase Invoices";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(380, 29);
+            this.label1.Location = new System.Drawing.Point(388, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 31);
             this.label1.TabIndex = 0;
@@ -1088,6 +1115,8 @@ namespace GreenPerfumes
             // SaleInvoices
             // 
             this.SaleInvoices.BackColor = System.Drawing.Color.White;
+            this.SaleInvoices.Controls.Add(this.txtSaleTotal);
+            this.SaleInvoices.Controls.Add(this.label35);
             this.SaleInvoices.Controls.Add(this.txtSearchSaleInvoice);
             this.SaleInvoices.Controls.Add(this.label33);
             this.SaleInvoices.Controls.Add(this.button8);
@@ -1104,6 +1133,27 @@ namespace GreenPerfumes
             this.SaleInvoices.TabIndex = 2;
             this.SaleInvoices.Text = "Sale Invoices";
             // 
+            // txtSearchSaleInvoice
+            // 
+            this.txtSearchSaleInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSearchSaleInvoice.Location = new System.Drawing.Point(741, 113);
+            this.txtSearchSaleInvoice.Name = "txtSearchSaleInvoice";
+            this.txtSearchSaleInvoice.Size = new System.Drawing.Size(300, 23);
+            this.txtSearchSaleInvoice.TabIndex = 20;
+            this.txtSearchSaleInvoice.TextChanged += new System.EventHandler(this.txtSearchSaleInvoice_TextChanged);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(538, 114);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(197, 25);
+            this.label33.TabIndex = 19;
+            this.label33.Text = "Search Sale Invoices";
+            // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Tomato;
@@ -1111,7 +1161,7 @@ namespace GreenPerfumes
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(481, 77);
+            this.button8.Location = new System.Drawing.Point(226, 154);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(87, 27);
             this.button8.TabIndex = 16;
@@ -1126,7 +1176,7 @@ namespace GreenPerfumes
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(388, 77);
+            this.button9.Location = new System.Drawing.Point(133, 154);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(87, 27);
             this.button9.TabIndex = 17;
@@ -1138,7 +1188,7 @@ namespace GreenPerfumes
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label28.Location = new System.Drawing.Point(208, 82);
+            this.label28.Location = new System.Drawing.Point(210, 130);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(25, 17);
             this.label28.TabIndex = 14;
@@ -1148,7 +1198,7 @@ namespace GreenPerfumes
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label29.Location = new System.Drawing.Point(13, 82);
+            this.label29.Location = new System.Drawing.Point(15, 130);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(40, 17);
             this.label29.TabIndex = 15;
@@ -1158,7 +1208,7 @@ namespace GreenPerfumes
             // 
             this.dtSale2.CustomFormat = "dd/MM/yyyy";
             this.dtSale2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSale2.Location = new System.Drawing.Point(239, 80);
+            this.dtSale2.Location = new System.Drawing.Point(241, 128);
             this.dtSale2.Name = "dtSale2";
             this.dtSale2.Size = new System.Drawing.Size(143, 20);
             this.dtSale2.TabIndex = 12;
@@ -1168,7 +1218,7 @@ namespace GreenPerfumes
             // 
             this.dtSale1.CustomFormat = "dd/MM/yyyy";
             this.dtSale1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSale1.Location = new System.Drawing.Point(59, 80);
+            this.dtSale1.Location = new System.Drawing.Point(61, 128);
             this.dtSale1.Name = "dtSale1";
             this.dtSale1.Size = new System.Drawing.Size(143, 20);
             this.dtSale1.TabIndex = 13;
@@ -1178,21 +1228,21 @@ namespace GreenPerfumes
             // 
             this.dgvSaleInvoices.AllowUserToAddRows = false;
             this.dgvSaleInvoices.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dgvSaleInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvSaleInvoices.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSaleInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSaleInvoices.BackgroundColor = System.Drawing.Color.White;
             this.dgvSaleInvoices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSaleInvoices.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSaleInvoices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle77.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle77.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle77.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSaleInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSaleInvoices.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSaleInvoices.ColumnHeadersHeight = 21;
             this.dgvSaleInvoices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvoiceIDCGVC,
@@ -1203,17 +1253,17 @@ namespace GreenPerfumes
             this.TotalCGVC,
             this.ViewButtonCGVC});
             this.dgvSaleInvoices.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle78.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle78.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSaleInvoices.DefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSaleInvoices.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSaleInvoices.EnableHeadersVisualStyles = false;
             this.dgvSaleInvoices.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
-            this.dgvSaleInvoices.Location = new System.Drawing.Point(6, 113);
+            this.dgvSaleInvoices.Location = new System.Drawing.Point(7, 184);
             this.dgvSaleInvoices.Name = "dgvSaleInvoices";
             this.dgvSaleInvoices.ReadOnly = true;
             this.dgvSaleInvoices.RowHeadersVisible = false;
@@ -1316,7 +1366,7 @@ namespace GreenPerfumes
             this.label3.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(380, 29);
+            this.label3.Location = new System.Drawing.Point(367, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 31);
             this.label3.TabIndex = 1;
@@ -1339,34 +1389,34 @@ namespace GreenPerfumes
             // 
             this.DGVStocks.AllowUserToAddRows = false;
             this.DGVStocks.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle79.BackColor = System.Drawing.Color.White;
-            this.DGVStocks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.DGVStocks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DGVStocks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVStocks.BackgroundColor = System.Drawing.Color.White;
             this.DGVStocks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVStocks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVStocks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle80.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle80.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle80.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVStocks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVStocks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DGVStocks.ColumnHeadersHeight = 21;
             this.DGVStocks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stockp,
             this.stockq,
             this.stocku});
-            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle81.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle81.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle81.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVStocks.DefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVStocks.DefaultCellStyle = dataGridViewCellStyle9;
             this.DGVStocks.EnableHeadersVisualStyles = false;
             this.DGVStocks.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVStocks.Location = new System.Drawing.Point(3, 112);
@@ -1541,21 +1591,21 @@ namespace GreenPerfumes
             // 
             this.dgvTransfers.AllowUserToAddRows = false;
             this.dgvTransfers.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle82.BackColor = System.Drawing.Color.White;
-            this.dgvTransfers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvTransfers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvTransfers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransfers.BackgroundColor = System.Drawing.Color.White;
             this.dgvTransfers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTransfers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTransfers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle83.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle83.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransfers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransfers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvTransfers.ColumnHeadersHeight = 21;
             this.dgvTransfers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TransferIDGVC,
@@ -1564,14 +1614,14 @@ namespace GreenPerfumes
             this.UnitGVC,
             this.DateGVCT,
             this.totalGVC});
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle84.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransfers.DefaultCellStyle = dataGridViewCellStyle84;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransfers.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvTransfers.EnableHeadersVisualStyles = false;
             this.dgvTransfers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvTransfers.Location = new System.Drawing.Point(6, 101);
@@ -1678,21 +1728,21 @@ namespace GreenPerfumes
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle85;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle86.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle86.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle86.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle86;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.guna2DataGridView1.ColumnHeadersHeight = 30;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C1,
@@ -1707,14 +1757,14 @@ namespace GreenPerfumes
             this.C10,
             this.C11,
             this.dataGridViewButtonColumn1});
-            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle87.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle87.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle87.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle87.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle87.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle87;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(28, 84);
@@ -1829,21 +1879,21 @@ namespace GreenPerfumes
             // 
             this.DGVLedgerInfo.AllowUserToAddRows = false;
             this.DGVLedgerInfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.DGVLedgerInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle88;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.DGVLedgerInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.DGVLedgerInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVLedgerInfo.BackgroundColor = System.Drawing.Color.White;
             this.DGVLedgerInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVLedgerInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVLedgerInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle89.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle89.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle89.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle89.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle89.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVLedgerInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle89;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVLedgerInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DGVLedgerInfo.ColumnHeadersHeight = 30;
             this.DGVLedgerInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InfoIDGV,
@@ -1858,14 +1908,14 @@ namespace GreenPerfumes
             this.RemainingBalanceGGV,
             this.AddressGGV,
             this.ActionGGV});
-            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle90.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle90.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle90.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle90.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle90.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVLedgerInfo.DefaultCellStyle = dataGridViewCellStyle90;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVLedgerInfo.DefaultCellStyle = dataGridViewCellStyle18;
             this.DGVLedgerInfo.EnableHeadersVisualStyles = false;
             this.DGVLedgerInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.DGVLedgerInfo.Location = new System.Drawing.Point(28, 84);
@@ -2042,21 +2092,21 @@ namespace GreenPerfumes
             // 
             this.DGVOpeniningInfo.AllowUserToAddRows = false;
             this.DGVOpeniningInfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.DGVOpeniningInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle91;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.DGVOpeniningInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.DGVOpeniningInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVOpeniningInfo.BackgroundColor = System.Drawing.Color.White;
             this.DGVOpeniningInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVOpeniningInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVOpeniningInfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle92.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle92.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle92.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle92.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle92.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVOpeniningInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle92;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVOpeniningInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.DGVOpeniningInfo.ColumnHeadersHeight = 40;
             this.DGVOpeniningInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDGV,
@@ -2072,14 +2122,14 @@ namespace GreenPerfumes
             this.PayingDateGV,
             this.AddressGV,
             this.ActionGV});
-            dataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle93.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle93.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle93.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle93.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle93.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVOpeniningInfo.DefaultCellStyle = dataGridViewCellStyle93;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVOpeniningInfo.DefaultCellStyle = dataGridViewCellStyle21;
             this.DGVOpeniningInfo.EnableHeadersVisualStyles = false;
             this.DGVOpeniningInfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.DGVOpeniningInfo.Location = new System.Drawing.Point(30, 87);
@@ -2375,47 +2425,49 @@ namespace GreenPerfumes
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtSearchPurhcaseInvoice
+            // txtPurchaseTotal
             // 
-            this.txtSearchPurhcaseInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSearchPurhcaseInvoice.Location = new System.Drawing.Point(733, 71);
-            this.txtSearchPurhcaseInvoice.Name = "txtSearchPurhcaseInvoice";
-            this.txtSearchPurhcaseInvoice.Size = new System.Drawing.Size(184, 23);
-            this.txtSearchPurhcaseInvoice.TabIndex = 18;
-            this.txtSearchPurhcaseInvoice.TextChanged += new System.EventHandler(this.txtSearchPurhcaseInvoice_TextChanged);
+            this.txtPurchaseTotal.Enabled = false;
+            this.txtPurchaseTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtPurchaseTotal.Location = new System.Drawing.Point(640, 155);
+            this.txtPurchaseTotal.Name = "txtPurchaseTotal";
+            this.txtPurchaseTotal.Size = new System.Drawing.Size(403, 23);
+            this.txtPurchaseTotal.TabIndex = 18;
+            this.txtPurchaseTotal.TextChanged += new System.EventHandler(this.txtSearchPurhcaseInvoice_TextChanged);
             // 
-            // label32
+            // label34
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(728, 41);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(240, 25);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Search Purchase Invoices";
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(542, 158);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(92, 17);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Total Amount";
+            this.label34.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtSearchSaleInvoice
+            // txtSaleTotal
             // 
-            this.txtSearchSaleInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSearchSaleInvoice.Location = new System.Drawing.Point(783, 77);
-            this.txtSearchSaleInvoice.Name = "txtSearchSaleInvoice";
-            this.txtSearchSaleInvoice.Size = new System.Drawing.Size(184, 23);
-            this.txtSearchSaleInvoice.TabIndex = 20;
-            this.txtSearchSaleInvoice.TextChanged += new System.EventHandler(this.txtSearchSaleInvoice_TextChanged);
+            this.txtSaleTotal.Enabled = false;
+            this.txtSaleTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSaleTotal.Location = new System.Drawing.Point(638, 142);
+            this.txtSaleTotal.Name = "txtSaleTotal";
+            this.txtSaleTotal.Size = new System.Drawing.Size(403, 23);
+            this.txtSaleTotal.TabIndex = 22;
             // 
-            // label33
+            // label35
             // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(778, 47);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(197, 25);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "Search Sale Invoices";
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(540, 145);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(92, 17);
+            this.label35.TabIndex = 21;
+            this.label35.Text = "Total Amount";
             // 
             // AllReports
             // 
@@ -2653,5 +2705,9 @@ namespace GreenPerfumes
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtSearchSaleInvoice;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtPurchaseTotal;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtSaleTotal;
+        private System.Windows.Forms.Label label35;
     }
 }

@@ -237,6 +237,7 @@ namespace GreenPerfumes
                     if(dgvCustomerLedgers.SelectedRows.Count == 1)
                     {
                         dgvCustomerLedgers.Enabled = false;
+                        lblp.Text = "Customer";
                         float payment = 0;
                         float remain = 0;
                         string name = "";
@@ -355,9 +356,8 @@ namespace GreenPerfumes
 
 
         private void btnPay_Click(object sender, EventArgs e)
-        {
+        {   
             
-           
             try
             {
                 MainClass.con.Open();
@@ -369,6 +369,24 @@ namespace GreenPerfumes
 
                     cmd = new SqlCommand("select PersonID from Persons where PersonName = '"+lblCustomer.Text+"' ", MainClass.con);
                     object supID = cmd.ExecuteScalar();
+
+                    try
+                    {
+                        cmd = new SqlCommand("update SupplierLedgers set InvoiceDate = @InvoiceDate,PaidAmount = @PaidAmount, RemaingBalance = @RemaingBalance where SupplierLedgerID = @SupplierLedgerID ", MainClass.con);
+                        cmd.Parameters.AddWithValue("@SupplierLedgerID", SUPLEDGERID);
+                        cmd.Parameters.AddWithValue("@InvoiceDate", dateTimePicker1.Value.ToShortDateString());
+                        cmd.Parameters.AddWithValue("@PaidAmount", float.Parse(txtPaying.Text));
+                        cmd.Parameters.AddWithValue("@RemaingBalance", float.Parse(txtRemaining.Text));
+                        cmd.ExecuteNonQuery();
+
+                    }
+                    catch (Exception ex1)
+                    {
+                        MessageBox.Show(ex1.Message);
+                        MainClass.con.Close();
+                        return;
+                    }
+                    
 
                     cmd = new SqlCommand("insert into SupplierLedgersInfo (SupplierLedger_ID, Supplier_ID,InvoiceDate,InvoiceNo,TotalAmount,LastPaid,TodaysPaid,PayingDate,RemaininigBalance) values (@SupplierLedger_ID,@Supplier_ID,@InvoiceDate,@InvoiceNo,@TotalAmount,@LastPaid,@TodaysPaid,@PayingDate,@RemaininigBalance)", MainClass.con);
                     cmd.Parameters.AddWithValue("@SupplierLedger_ID", SUPLEDGERID);
@@ -393,12 +411,7 @@ namespace GreenPerfumes
                     cmd.ExecuteNonQuery();
 
 
-                    cmd = new SqlCommand("update SupplierLedgers set InvoiceDate = @InvoiceDate,PaidAmount = @PaidAmount, RemaingBalance = @RemaingBalance where SupplierLedgerID = @SupplierLedgerID ", MainClass.con);
-                    cmd.Parameters.AddWithValue("@SupplierLedgerID", SUPLEDGERID);
-                    cmd.Parameters.AddWithValue("@InvoiceDate", dateTimePicker1.Value.ToShortDateString());
-                    cmd.Parameters.AddWithValue("@PaidAmount", float.Parse(txtPaying.Text));
-                    cmd.Parameters.AddWithValue("@RemaingBalance", float.Parse(txtRemaining.Text));
-                    cmd.ExecuteNonQuery();
+                 
                     
                 }
                 else
@@ -455,6 +468,7 @@ namespace GreenPerfumes
                 }
                 else
                 {
+                    changedtype = 0;
                     LedgerReportForm lf = new LedgerReportForm();
                     lf.Show();
                 }
@@ -502,6 +516,11 @@ namespace GreenPerfumes
         {
             FIXATION fx = new FIXATION();
             fx.Show();
+        }
+
+        private void GPPAyment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
