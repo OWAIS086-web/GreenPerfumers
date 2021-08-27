@@ -839,10 +839,7 @@ namespace GreenPerfumes
                     cmd = new SqlCommand("delete from SalesDetails  where CustomerInvoice_ID = '" + customerinvoiceid + "'", MainClass.con);
                     cmd.ExecuteNonQuery();
 
-                    cmd = new SqlCommand("delete from SalesDetails  where CustomerInvoice_ID = '" + customerinvoiceid + "'", MainClass.con);
-                    cmd.ExecuteNonQuery();
-
-                    cmd = new SqlCommand("delete from Sales where InvoiceNo =  '" + SalesQTY[5].ToString() + "'", MainClass.con);
+                    cmd = new SqlCommand("delete from Sales where CustomerInvoice_ID =  '"+customerinvoiceid+"'", MainClass.con);
                     cmd.ExecuteNonQuery();
 
 

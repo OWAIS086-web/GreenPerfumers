@@ -374,6 +374,7 @@ namespace GreenPerfumes
             txtCustomerName.Text = "";
             txtInvoiceType.Text = "";
             txtTotalAmount.Text = "";
+            SALEINVOICENO = "";
             txtPayingAmount.Text = "";
             txtTotalBalance.Text = "";
             txtRemainingAmount.Text = "";
