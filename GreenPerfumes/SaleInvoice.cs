@@ -26,6 +26,9 @@ namespace GreenPerfumes
                 return (ParentForm as TitleBarTabs);
             }
         }
+
+
+      
         public SaleInvoice()
         {
             InitializeComponent();
@@ -515,6 +518,11 @@ namespace GreenPerfumes
                             Convert.ToString(check.Cells[5].Value) == Convert.ToString(cboUnit.SelectedValue))
                         {
                             productcheck = true;
+                            break;
+                        }
+                        else
+                        {
+                            productcheck = false;
                         }
                     }
                     if (productcheck == true)
@@ -592,7 +600,16 @@ namespace GreenPerfumes
                 txtRemainingAmount.Text = gross.ToString();
             }
             del();
-            
+
+
+            int productcount = 0;
+            foreach (DataGridViewRow row in dgvSaleItems.Rows)
+            {
+                productcount++;
+            }
+            label25.Text = int.Parse(productcount.ToString()).ToString();
+
+
         }
 
         private void txtPayingAmount_TextChanged(object sender, EventArgs e)
@@ -832,7 +849,6 @@ namespace GreenPerfumes
                         cmd.Parameters.AddWithValue("@SaleLastPayingDate", dtInvoice.Value.ToShortDateString());
                         cmd.Parameters.AddWithValue("@SaleBalance", float.Parse(txtRemainingAmount.Text));
                         cmd.ExecuteNonQuery();
-
                         MessageBox.Show("Sale Successful");
                         SALEINVOICENO = invoiceno;
                         SaleReportForm srf = new SaleReportForm();
@@ -1283,5 +1299,7 @@ namespace GreenPerfumes
                 }
             
         }
+
+      
     }
 }
