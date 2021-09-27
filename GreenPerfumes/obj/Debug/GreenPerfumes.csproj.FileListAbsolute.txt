@@ -122,7 +122,6 @@ D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\Win32Interop.Gdi32.
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\Win32Interop.Kernel32.pdb
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\Win32Interop.User32.pdb
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\Win32Interop.Uxtheme.pdb
-D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\obj\Debug\GreenPerfumes.csproj.AssemblyReference.cache
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\obj\Debug\GreenPerfumes.AdminLogin.resources
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\obj\Debug\GreenPerfumes.AdminPanel.resources
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\obj\Debug\GreenPerfumes.AllReports.resources
@@ -168,3 +167,4 @@ D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\CrystalDecisions.Cr
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\CrystalDecisions.Shared.dll
 D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\New folder\Old Code\GreenPerfumes\GreenPerfumes\obj\Debug\GreenPerfumes.csproj.AssemblyReference.cache

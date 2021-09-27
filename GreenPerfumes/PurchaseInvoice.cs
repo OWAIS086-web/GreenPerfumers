@@ -493,6 +493,27 @@ namespace GreenPerfumes
                 {
                     if (item.Cells[2].Value.ToString() == "3")
                     {
+                        int unitchanged2 = 0;
+                        //Exisiting Stock Check
+
+                        if (item.Cells[5].Value.ToString() == "1")
+                        {
+                            item.Cells[5].Value = "3";
+                            unitchanged2 = 1;
+                        }
+                        else if (item.Cells[5].Value.ToString() == "2")
+                        {
+                            item.Cells[5].Value = "3";
+                            unitchanged2 = 2;
+                        }
+
+                        else if (item.Cells[5].Value.ToString() == "6")
+                        {
+                            item.Cells[5].Value = "5";
+                            unitchanged2 = 3;
+                        }
+
+
                         float q;
                         string CheckStock = "select s.sh_Qty as 'Quantity' from ShopStocks s where s.sh_Pcode = '" + Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()) + "'and s.sh_Unit = '" + Convert.ToInt32(item.Cells["UnitID"].Value.ToString()) + "'";
                         cmd = new SqlCommand(CheckStock, MainClass.con);
@@ -500,35 +521,93 @@ namespace GreenPerfumes
 
                         if (ob != null)
                         {
-                            //Update Quantity into Stocks
-                            if (item.Cells[5].Value.ToString() == "1")
+
+                            if (item.Cells[5].Value.ToString() == "3")
                             {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 1000;
-                                MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                item.Cells[5].Value = "1";
+                                unitchanged2 = 1;
                             }
-                            else if (item.Cells[5].Value.ToString() == "2")
+                            else if (item.Cells[5].Value.ToString() == "3")
                             {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 25;
-                                MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                item.Cells[5].Value = "2";
+                                unitchanged2 = 2;
                             }
-                            else if (item.Cells[5].Value.ToString() == "6")
+
+                            else if (item.Cells[5].Value.ToString() == "5")
                             {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 12;
-                                MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                item.Cells[5].Value = "6";
+                                unitchanged2 = 3;
+                            }
+
+                            if (int.Parse(ob.ToString()) == 0)
+                            {
+                                #region UPDATEREGION
+                                //Update Quantity into Stocks
+                                if (item.Cells[5].Value.ToString() == "1")
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 1000;
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                else if (item.Cells[5].Value.ToString() == "2")
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 25;
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                else if (item.Cells[5].Value.ToString() == "6")
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 12;
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                else
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString());
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                #endregion
                             }
                             else
                             {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString());
-                                MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                #region UPDATEREGION
+                                //Update Quantity into Stocks
+                                if (item.Cells[5].Value.ToString() == "1")
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 1000;
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                else if (item.Cells[5].Value.ToString() == "2")
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 25;
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                else if (item.Cells[5].Value.ToString() == "6")
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 12;
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                else
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString());
+                                    MainClass.UpdateShopStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                }
+                                #endregion
                             }
+
+
                         }
                         else
                         {
+                            #region INSERTREGION
                             //Insert Stocks into Stocks
+
+                           
 
                             if (item.Cells[2].Value.ToString() == "3")
                             {
@@ -577,6 +656,8 @@ namespace GreenPerfumes
                                 }
                                 cmd4.ExecuteNonQuery();
                             }
+                            #endregion
+
                         }
                     }
 
@@ -608,42 +689,85 @@ namespace GreenPerfumes
 
                         if (ob != null)
                         {
+                            if (int.Parse(ob.ToString()) == 0)
+                            {
 
-                            //Update Quantity into Stocks
-                            if (unitchanged == 1)
-                            {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 1000;
-                                MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
-                                ad = 2;
-                            }
-                            else if (unitchanged == 2)
-                            {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 25;
-                                MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
-                                ad = 1;
-                            }
+                                #region UPDATEREGION GODOWN
 
-                            else if (unitchanged == 2)
-                            {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 12;
-                                MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
-                                ad = 4;
+                                //Update Quantity into Stocks
+                                if (unitchanged == 1)
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 1000;
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 2;
+                                }
+                                else if (unitchanged == 2)
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 25;
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 1;
+                                }
+
+                                else if (unitchanged == 3)
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 12;
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 4;
+                                }
+                                else
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString());
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 3;
+                                }
+                                #endregion
                             }
                             else
                             {
-                                q = Convert.ToInt32(ob);
-                                q += float.Parse(item.Cells["QtyGVC"].Value.ToString());
-                                MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
-                                ad = 3;
+                                #region UPDATEREGION GODOWN
+
+                                //Update Quantity into Stocks
+                                if (unitchanged == 1)
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 1000;
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 2;
+                                }
+                                else if (unitchanged == 2)
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 25;
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 1;
+                                }
+
+                                else if (unitchanged == 3)
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString()) * 12;
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 4;
+                                }
+                                else
+                                {
+                                    q = Convert.ToInt32(ob);
+                                    q += float.Parse(item.Cells["QtyGVC"].Value.ToString());
+                                    MainClass.UpdateStock(Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()), q);
+                                    ad = 3;
+                                }
+                                #endregion
                             }
                         }
 
                         else
                         {
 
+                            #region INSERTREGION
                             bool okay = false;
                             string InsertStocks = "insert into Stocks (st_Pcode,st_Qty,st_Unit) values (@st_Pcode,@st_Qty,@st_Unit)";
                             SqlCommand cmd4 = new SqlCommand(InsertStocks, MainClass.con);
@@ -691,7 +815,7 @@ namespace GreenPerfumes
                             }
                             cmd4.ExecuteNonQuery();
 
-
+                            #endregion
                         }
                     }
 

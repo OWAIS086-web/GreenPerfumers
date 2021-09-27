@@ -138,7 +138,6 @@ namespace GreenPerfumes
                     cmd = new SqlCommand("select sh_Unit from ShopStocks where sh_Pcode = '" + cboProductName.SelectedValue + "'    ", MainClass.con);
                     unitcheck = cmd.ExecuteScalar();
 
-
                     if(guna2CheckBox1.Checked )
                     {
                         cmd = new SqlCommand("select InHandQty from ExtraProducts where ProductName = '" + cboProductName.Text + "'    ", MainClass.con);
@@ -149,7 +148,7 @@ namespace GreenPerfumes
                         cmd = new SqlCommand("select sh_Qty  from ShopStocks where sh_Pcode = '" + cboProductName.SelectedValue + "'    ", MainClass.con);
                         stockqty = cmd.ExecuteScalar();
                     }
-                    if (stockqty == null )
+                    if (stockqty == null)
                     {
                         lblInStock.Text = "No";
                     }
@@ -678,12 +677,23 @@ namespace GreenPerfumes
 
                 Random generator = new Random();
                 string invoiceno = "SAL" + generator.Next(0, 1000000).ToString("D6");
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("select InvoiceNo from Sales where InvoiceNo  = '" + invoiceno + "'", MainClass.con);
+                object notunique = cmd.ExecuteScalar();
+                MainClass.con.Close();
+
+                if(notunique != null)
+                {
+                    generator = new Random();
+                    invoiceno = "SAL" + generator.Next(0, 1000000).ToString("D6");
+                }
+
                 float grandtotal = float.Parse(txtGrandTotal.Text.ToString());
                 MainClass.con.Open();
                 try
                 {
                     string InsertCustomerInvoice = "insert into CustomerInvoices (Customer_ID,PaymentType,InvoiceDate,Warehouse_ID) values (@Customer_ID,@PaymentType,@InvoiceDate,@Warehouse_ID)";
-                    SqlCommand cmd = new SqlCommand(InsertCustomerInvoice, MainClass.con);
+                    cmd = new SqlCommand(InsertCustomerInvoice, MainClass.con);
                     cmd.Parameters.AddWithValue("@Customer_ID", cboCustomer.SelectedValue.ToString());
                     cmd.Parameters.AddWithValue("@PaymentType", cboInvoiceType.Text);
                     cmd.Parameters.AddWithValue("@InvoiceDate", dtInvoice.Value.ToShortDateString());
