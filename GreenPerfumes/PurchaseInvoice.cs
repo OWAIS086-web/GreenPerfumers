@@ -126,7 +126,7 @@ namespace GreenPerfumes
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-            int dx;
+            float dx;
             object ob = null;
             try
             {
@@ -151,7 +151,7 @@ namespace GreenPerfumes
                   cboUnit.SelectedIndex.ToString() == "4" && txtQuantity.Text.ToString() == "96" || cboUnit.SelectedIndex.ToString() == "4" && txtQuantity.Text.ToString() == "108" || cboUnit.SelectedIndex.ToString() == "4" && txtQuantity.Text.ToString() == "120")
                 {
                     cboUnit.SelectedIndex = 5;
-                    dx = int.Parse(txtQuantity.Text);
+                    dx = float.Parse(txtQuantity.Text);
                     txtQuantity.Text = Convert.ToString(dx / 12);
 
                 }
@@ -515,7 +515,7 @@ namespace GreenPerfumes
 
 
                         float q;
-                        string CheckStock = "select s.sh_Qty as 'Quantity' from ShopStocks s where s.sh_Pcode = '" + Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()) + "'and s.sh_Unit = '" + Convert.ToInt32(item.Cells["UnitID"].Value.ToString()) + "'";
+                        string CheckStock = "select s.sh_Qty as 'Quantity' from ShopStocks s where s.sh_Pcode = '" + Convert.ToInt32(item.Cells["PcodeGVC"].Value.ToString()) + "' ";
                         cmd = new SqlCommand(CheckStock, MainClass.con);
                         object ob = cmd.ExecuteScalar();
 
@@ -539,7 +539,7 @@ namespace GreenPerfumes
                                 unitchanged2 = 3;
                             }
 
-                            if (int.Parse(ob.ToString()) == 0)
+                            if (float.Parse(ob.ToString()) == 0)
                             {
                                 #region UPDATEREGION
                                 //Update Quantity into Stocks
@@ -689,7 +689,7 @@ namespace GreenPerfumes
 
                         if (ob != null)
                         {
-                            if (int.Parse(ob.ToString()) == 0)
+                            if (float.Parse(ob.ToString()) == 0)
                             {
 
                                 #region UPDATEREGION GODOWN
