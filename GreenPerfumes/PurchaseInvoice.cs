@@ -302,6 +302,11 @@ namespace GreenPerfumes
                             Convert.ToString(check.Cells[5].Value) == Convert.ToString(cboUnit.SelectedValue))
                         {
                             productcheck = true;
+                            break;
+                        }
+                        else
+                        {
+                            productcheck = false;
                         }
                     }
                     if(productcheck == true)

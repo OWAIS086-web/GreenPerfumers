@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 namespace GreenPerfumes
 {
     public partial class ViewSaleInvoices : Form
@@ -21,7 +23,17 @@ namespace GreenPerfumes
         public ViewSaleInvoices(SaleInvoice s)
         {
             InitializeComponent();
+
             this.si = s;
+        }
+
+        public string solution(string message, int K)
+        {
+
+            if (message == null || message.Length < K)
+                return message;
+            int iNextSpace = message.LastIndexOf(" ", K, StringComparison.Ordinal);
+            return string.Format("{0}…", message.Substring(0, (iNextSpace > 0) ? iNextSpace : K).Trim());
         }
 
 

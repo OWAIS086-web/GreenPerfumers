@@ -676,6 +676,7 @@ namespace GreenPerfumes
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Add Sale Item";
             this.guna2GroupBox1.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // guna2CheckBox1
             // 

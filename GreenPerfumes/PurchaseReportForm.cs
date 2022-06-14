@@ -24,8 +24,14 @@ namespace GreenPerfumes
             rd = new ReportDocument();
             if (PurchaseInvoice.INVOICENO == "")
             {
-                MainClass.ShowReportsp(rd, crystalReportViewer1, "GetPurchaseRecieptWRTSuipplierInvoiceID", "@SupplierInvoice_ID",AllReports.Invoice_ID);
+                if(AllReports.Invoice_ID != 0)
+                {
+                    MainClass.ShowReportsp(rd, crystalReportViewer1, "GetPurchaseRecieptWRTSuipplierInvoiceID", "@SupplierInvoice_ID", AllReports.Invoice_ID);
+                }
+               
+
             }
+           
             else
             {
                 MainClass.ShowReportsp(rd, crystalReportViewer1, "GetPurchaseReciept", "@PurchaseInvoiceNo", PurchaseInvoice.INVOICENO);

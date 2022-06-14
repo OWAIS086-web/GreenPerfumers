@@ -496,7 +496,19 @@ namespace GreenPerfumes
                     DataGridViewRow createrow = new DataGridViewRow();
                     createrow.CreateCells(dgvSaleItems);
                     createrow.Cells[0].Value = cboProductName.SelectedValue;
-                    createrow.Cells[1].Value = cboProductName.Text;
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("select UrduName from Products where Pcode  = '"+ cboProductName.SelectedValue + "'", MainClass.con);
+                    object ob = cmd.ExecuteScalar();
+                    if(ob != null)
+                    {
+                        createrow.Cells[1].Value = ob.ToString();
+                    }
+                    else
+                    {
+                        createrow.Cells[1].Value = cboProductName.Text;
+                    }
+                    MainClass.con.Close();
+
                     createrow.Cells[2].Value = cboWarehouse.SelectedValue;
                     createrow.Cells[3].Value = cboWarehouse.Text;
                     createrow.Cells[4].Value = quantity;
@@ -543,8 +555,18 @@ namespace GreenPerfumes
                             DataGridViewRow createrow = new DataGridViewRow();
                             createrow.CreateCells(dgvSaleItems);
                             createrow.Cells[0].Value = cboProductName.SelectedValue;
-                            createrow.Cells[1].Value = cboProductName.Text;
-                            createrow.Cells[2].Value = cboWarehouse.SelectedValue;
+                            MainClass.con.Open();
+                            SqlCommand cmd = new SqlCommand("select UrduName from Products where Pcode  = '" + cboProductName.SelectedValue + "'", MainClass.con);
+                            object ob = cmd.ExecuteScalar();
+                            if (ob != null)
+                            {
+                                createrow.Cells[1].Value = ob.ToString();
+                            }
+                            else
+                            {
+                                createrow.Cells[1].Value = cboProductName.Text;
+                            }
+                            MainClass.con.Close(); createrow.Cells[2].Value = cboWarehouse.SelectedValue;
                             createrow.Cells[3].Value = cboWarehouse.Text;
                             createrow.Cells[4].Value = quantity;
                             createrow.Cells[5].Value = cboUnit.SelectedValue;
@@ -596,7 +618,9 @@ namespace GreenPerfumes
             }
             if (txtPayingAmount.Text == "0" || txtPayingAmount.Text == "")
             {
+
                 txtRemainingAmount.Text = gross.ToString();
+
             }
             del();
 
@@ -838,8 +862,23 @@ namespace GreenPerfumes
                         cmd3.Parameters.AddWithValue("@InvoiceType", cboInvoiceType.Text);
                         cmd3.Parameters.AddWithValue("@InvoiceDate", dtInvoice.Value.ToShortDateString());
                         cmd3.Parameters.AddWithValue("@TotalAmount", float.Parse(txtTotalAmount.Text));
-                        cmd3.Parameters.AddWithValue("@PaidAmount", float.Parse(txtPayingAmount.Text));
-                        cmd3.Parameters.AddWithValue("@RemainingBalance", float.Parse(txtRemainingAmount.Text));
+                        if (cboInvoiceType.Text == "Cash")
+                        {
+                            cmd3.Parameters.AddWithValue("@PaidAmount", float.Parse(txtTotalAmount.Text));
+                        }
+                        else
+                        {
+                            cmd3.Parameters.AddWithValue("@PaidAmount", float.Parse(txtPayingAmount.Text));
+                        }
+
+                        if (cboInvoiceType.Text == "Cash")
+                        {
+                            cmd3.Parameters.AddWithValue("@RemainingBalance", 0);
+                        }
+                        else
+                        {
+                            cmd3.Parameters.AddWithValue("@RemainingBalance", float.Parse(txtRemainingAmount.Text));
+                        }
                         cmd3.ExecuteNonQuery();
 
                         ////Get SalesID
@@ -1310,6 +1349,9 @@ namespace GreenPerfumes
             
         }
 
-      
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace GreenPerfumes
             theTabControl.SizeMode = TabSizeMode.Fixed;
         }
 
-        private static string s = @"Data Source=DESKTOP-NF708D7;Initial Catalog=GreenPerfumes;Integrated Security = True;MultipleActiveResultSets=true;";
+        private static string s = @"Data Source=DESKTOP-3B6E518;Initial Catalog=GreenPerfumes;Integrated Security = True;MultipleActiveResultSets=true;";
             
         public static SqlConnection con = new SqlConnection(s);
 

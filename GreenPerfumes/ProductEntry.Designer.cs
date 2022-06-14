@@ -35,10 +35,9 @@ namespace GreenPerfumes
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.PcodeGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductNameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,8 +53,12 @@ namespace GreenPerfumes
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.refresh = new System.Windows.Forms.Button();
             this.lblcode = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtUrduName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PcodeGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductNameGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductNameUrduGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -76,6 +79,25 @@ namespace GreenPerfumes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 675);
             this.panel1.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(18, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Search";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtSearch.Location = new System.Drawing.Point(77, 29);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(356, 23);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dataGridView1
             // 
@@ -101,7 +123,8 @@ namespace GreenPerfumes
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PcodeGV,
             this.ProductNameGV,
-            this.CategoryGV});
+            this.CategoryGV,
+            this.ProductNameUrduGV});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
@@ -146,26 +169,6 @@ namespace GreenPerfumes
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
             this.dataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError_2);
-            // 
-            // PcodeGV
-            // 
-            this.PcodeGV.HeaderText = "Pcode";
-            this.PcodeGV.Name = "PcodeGV";
-            this.PcodeGV.ReadOnly = true;
-            // 
-            // ProductNameGV
-            // 
-            this.ProductNameGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductNameGV.HeaderText = "Product Name";
-            this.ProductNameGV.Name = "ProductNameGV";
-            this.ProductNameGV.ReadOnly = true;
-            // 
-            // CategoryGV
-            // 
-            this.CategoryGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CategoryGV.HeaderText = "Category";
-            this.CategoryGV.Name = "CategoryGV";
-            this.CategoryGV.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -224,7 +227,7 @@ namespace GreenPerfumes
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 183);
+            this.label3.Location = new System.Drawing.Point(12, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 0;
@@ -235,7 +238,7 @@ namespace GreenPerfumes
             this.btnaddcat.FlatAppearance.BorderSize = 2;
             this.btnaddcat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddcat.ForeColor = System.Drawing.Color.White;
-            this.btnaddcat.Location = new System.Drawing.Point(422, 174);
+            this.btnaddcat.Location = new System.Drawing.Point(425, 222);
             this.btnaddcat.Name = "btnaddcat";
             this.btnaddcat.Size = new System.Drawing.Size(58, 27);
             this.btnaddcat.TabIndex = 4;
@@ -248,7 +251,7 @@ namespace GreenPerfumes
             this.btnSave.FlatAppearance.BorderSize = 2;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(221, 207);
+            this.btnSave.Location = new System.Drawing.Point(224, 255);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(162, 38);
             this.btnSave.TabIndex = 2;
@@ -264,7 +267,7 @@ namespace GreenPerfumes
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(113, 177);
+            this.cboCategory.Location = new System.Drawing.Point(116, 225);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(270, 24);
             this.cboCategory.TabIndex = 1;
@@ -276,7 +279,7 @@ namespace GreenPerfumes
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(113, 207);
+            this.btnCancel.Location = new System.Drawing.Point(116, 255);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(94, 38);
             this.btnCancel.TabIndex = 3;
@@ -295,6 +298,8 @@ namespace GreenPerfumes
             this.panel2.Controls.Add(this.btnaddcat);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lblcode);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtUrduName);
             this.panel2.Controls.Add(this.bl);
             this.panel2.Controls.Add(this.txtProductName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -322,7 +327,7 @@ namespace GreenPerfumes
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.ForeColor = System.Drawing.Color.White;
             this.refresh.Image = global::GreenPerfumes.Properties.Resources.icons8_reset_16;
-            this.refresh.Location = new System.Drawing.Point(389, 176);
+            this.refresh.Location = new System.Drawing.Point(392, 224);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(27, 24);
             this.refresh.TabIndex = 5;
@@ -340,24 +345,48 @@ namespace GreenPerfumes
             this.lblcode.Text = "Pcode";
             this.lblcode.Visible = false;
             // 
-            // label5
+            // txtUrduName
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(18, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Search";
+            this.txtUrduName.Location = new System.Drawing.Point(162, 188);
+            this.txtUrduName.Name = "txtUrduName";
+            this.txtUrduName.Size = new System.Drawing.Size(270, 23);
+            this.txtUrduName.TabIndex = 0;
             // 
-            // txtSearch
+            // label1
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSearch.Location = new System.Drawing.Point(77, 29);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(356, 23);
-            this.txtSearch.TabIndex = 13;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Product Name in Urdu";
+            // 
+            // PcodeGV
+            // 
+            this.PcodeGV.HeaderText = "Pcode";
+            this.PcodeGV.Name = "PcodeGV";
+            this.PcodeGV.ReadOnly = true;
+            // 
+            // ProductNameGV
+            // 
+            this.ProductNameGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductNameGV.HeaderText = "Product Name";
+            this.ProductNameGV.Name = "ProductNameGV";
+            this.ProductNameGV.ReadOnly = true;
+            // 
+            // CategoryGV
+            // 
+            this.CategoryGV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CategoryGV.HeaderText = "Category";
+            this.CategoryGV.Name = "CategoryGV";
+            this.CategoryGV.ReadOnly = true;
+            // 
+            // ProductNameUrduGV
+            // 
+            this.ProductNameUrduGV.HeaderText = "پروڈکٹ اردو";
+            this.ProductNameUrduGV.Name = "ProductNameUrduGV";
+            this.ProductNameUrduGV.ReadOnly = true;
             // 
             // ProductEntry
             // 
@@ -399,10 +428,13 @@ namespace GreenPerfumes
         private System.Windows.Forms.Label lblcode;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         public Guna.UI2.WinForms.Guna2DataGridView dataGridView1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtUrduName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PcodeGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductNameGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryGV;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductNameUrduGV;
     }
 }

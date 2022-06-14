@@ -22,7 +22,7 @@ namespace GreenPerfumes
             InitializeComponent();
         }
 
-        private void ShowProducts(DataGridView dgv, DataGridViewColumn PCODEGV, DataGridViewColumn ProductNameGV, DataGridViewColumn CategoryGV, string data = null)
+        private void ShowProducts(DataGridView dgv, DataGridViewColumn PCODEGV, DataGridViewColumn ProductNameGV, DataGridViewColumn CategoryGV,DataGridViewColumn UrduName, string data = null)
         {
             SqlCommand cmd = null;
             try
@@ -30,11 +30,11 @@ namespace GreenPerfumes
                 MainClass.con.Open();
                 if (data != null)
                 {
-                    cmd = new SqlCommand("select p.Pcode,p.ProductName,c.Category from  Products as p inner join Categories c on c.CategoryID = p.CatID where p.ProductName like '%" + data + "%' and Extra = 0 order by p.ProductName asc	", MainClass.con);
+                    cmd = new SqlCommand("select p.Pcode,p.ProductName,c.Category,p.UrduName from  Products as p inner join Categories c on c.CategoryID = p.CatID where p.ProductName like '%" + data + "%' and Extra = 0 order by p.ProductName asc	", MainClass.con);
                 }
                 else
                 {
-                    cmd = new SqlCommand("select p.Pcode,p.ProductName,c.Category from  Products as p inner join Categories c on c.CategoryID = p.CatID  where  Extra = 0 order by p.ProductName asc	", MainClass.con);
+                    cmd = new SqlCommand("select p.Pcode,p.ProductName,c.Category,p.UrduName from  Products as p inner join Categories c on c.CategoryID = p.CatID  where  Extra = 0 order by p.ProductName asc	", MainClass.con);
                 }
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -43,6 +43,7 @@ namespace GreenPerfumes
                 PCODEGV.DataPropertyName = dt.Columns["Pcode"].ToString();
                 ProductNameGV.DataPropertyName = dt.Columns["ProductName"].ToString();
                 CategoryGV.DataPropertyName = dt.Columns["Category"].ToString();
+                UrduName.DataPropertyName = dt.Columns["UrduName"].ToString();
                 dgv.DataSource = dt;
                 MainClass.con.Close();
             }
@@ -56,7 +57,7 @@ namespace GreenPerfumes
 
         private void ProductEntry_Load(object sender, EventArgs e)
         {
-            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV);
+            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV,ProductNameUrduGV);
             MainClass.FillCategories(cboCategory);
         }
 
@@ -119,15 +120,16 @@ namespace GreenPerfumes
 
                  
                     MainClass.con.Open();
-                    cmd = new SqlCommand("Insert into Products (ProductName,CatID,Extra) values(@ProductName,@CatID,@Extra)", MainClass.con);
+                    cmd = new SqlCommand("Insert into Products (ProductName,CatID,Extra,UrduName) values(@ProductName,@CatID,@Extra,@UrduName)", MainClass.con);
                     cmd.Parameters.AddWithValue("@ProductName", txtProductName.Text);
                     cmd.Parameters.AddWithValue("@CatID", catId);
                     cmd.Parameters.AddWithValue("@Extra", 0);
+                    cmd.Parameters.AddWithValue("@UrduName", txtUrduName.Text);
                     cmd.ExecuteNonQuery();
                     MainClass.con.Close();
                     MessageBox.Show("Product Added Successfully");
                     Clear();
-                    ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV);
+            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV,ProductNameUrduGV);
                 }
             }
             else
@@ -159,16 +161,17 @@ namespace GreenPerfumes
                             
 
                             MainClass.con.Open();
-                            cmd = new SqlCommand("update  Products set ProductName = @ProductName,CatID = @CatID where Pcode = @Pcode", MainClass.con);
+                            cmd = new SqlCommand("update  Products set ProductName = @ProductName,CatID = @CatID, UrduName=@UrduName where Pcode = @Pcode ", MainClass.con);
                             cmd.Parameters.AddWithValue("@Pcode", lblcode.Text);
                             cmd.Parameters.AddWithValue("@ProductName", txtProductName.Text);
                             cmd.Parameters.AddWithValue("@CatID", catId);
+                            cmd.Parameters.AddWithValue("@UrduName", txtUrduName.Text);
 
                             cmd.ExecuteNonQuery();
                             MainClass.con.Close();
                             MessageBox.Show("Product Updated Successfully.");
                             Clear();
-                            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV);
+                    ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV,ProductNameUrduGV);
                             edit = 0;
                         }
                         catch (Exception ex)
@@ -203,7 +206,7 @@ namespace GreenPerfumes
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Products Deleted Successfully");
                             MainClass.con.Close();
-                            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV);
+                    ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV,ProductNameUrduGV);
                         }
                         catch (Exception ex)
                         {
@@ -221,7 +224,7 @@ namespace GreenPerfumes
             lblcode.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txtProductName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             cboCategory.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-       
+            txtUrduName.Text = dataGridView1.CurrentRow.Cells["ProductNameUrduGV"].Value.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -253,7 +256,7 @@ namespace GreenPerfumes
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV,txtSearch.Text);
+            ShowProducts(dataGridView1, PcodeGV, ProductNameGV, CategoryGV,ProductNameUrduGV,txtSearch.Text);
 
         }
     }
